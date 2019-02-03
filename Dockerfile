@@ -1,6 +1,7 @@
 FROM ubuntu:18.04
 MAINTAINER yowcow <yowcow@cpan.org>
 
+# Taken from qmk_firmware/util/linux_install.sh
 RUN apt-get -y update && \
     apt-get -y install \
         build-essential \
@@ -18,4 +19,3 @@ RUN apt-get -y update && \
         unzip \
         wget \
         zip
-
