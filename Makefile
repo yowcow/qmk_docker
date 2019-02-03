@@ -11,7 +11,9 @@ DOCKER_RUN_OPT := \
 ARTIFACT := redox_rev1_yowcow.hex
 TARGET := redox:yowcow
 
-all: $(ARTIFACT)
+all: build
+
+build: $(ARTIFACT)
 
 setup:
 	$(MAKE) -j 2 docker-build $(FIRMWARE)
@@ -29,7 +31,7 @@ $(ARTIFACT):
 	docker run --rm -it $(DOCKER_RUN_OPT) $(IMAGE) sh -c 'make $(TARGET)' && cp $(BUILD)/$(ARTIFACT) .
 
 clean:
-	rm -rf $(ARTIFACT) $(BUILD)
+	rm -rf $(ARTIFACT) $(BUILD) $(FIRMWARE)/$(ARTIFACT)
 
 realclean: clean
 	docker rmi $(IMAGE)
