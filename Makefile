@@ -33,7 +33,7 @@ clean:
 
 realclean: clean
 	docker rmi $(IMAGE)
-	rm -rf $(FIRMWARE)
+	#rm -rf $(FIRMWARE)
 
 debug: $(BUILD)
 	docker run --rm -it $(DOCKER_RUN_OPT) $(IMAGE) bash
