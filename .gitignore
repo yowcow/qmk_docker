@@ -1,0 +1,3 @@
+/.build
+/qmk_firmware
+*.hex
