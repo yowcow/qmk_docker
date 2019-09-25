@@ -18,4 +18,5 @@ RUN apt-get -y update && \
         libnewlib-arm-none-eabi \
         unzip \
         wget \
-        zip
+        zip \
+        python3
