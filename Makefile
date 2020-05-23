@@ -19,7 +19,6 @@ setup:
 	$(MAKE) -j 2 docker-build $(FIRMWARE)
 
 docker-build:
-	docker pull ubuntu:18.04
 	docker build -t $(IMAGE) .
 
 $(FIRMWARE):

@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 MAINTAINER yowcow <yowcow@cpan.org>
 
 # Taken from qmk_firmware/util/linux_install.sh
